@@ -1,0 +1,30 @@
+Creando binarios 
+Lo Primero a tener en cuenta es que el metodos o existe un metodo con el cual podemos directamente 
+extraer los binarios de un string 
+
+Pero tener en cuenta que este binario tiene que ser un arrays
+
+Ejempl:   String TTexto = "Palabrea";
+          byte[] bytes = TText.getBytes();
+
+
+for(int l = 0 ; l < bytes.length; l ++){
+                 
+
+           int value = l;
+           StringBuilder stringBuilder = new StringBuilder();
+for(int x = 0 ; x < bytes.length; x ++){
+
+           
+
+           stringBuilder.append((value & 128)== 0 ? 0:1);
+           value<<=1;
+
+           }
+
+   }
+return stringBuilder.toString();
+
+
+
+
